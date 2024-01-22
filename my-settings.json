@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Black Italic",
+  "workbench.colorTheme": "Solarized Osaka",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.iconTheme": "symbols",
   "workbench.sideBar.location": "right",
@@ -103,7 +103,11 @@
 		// This results in code completion suggesting words when editing comments and
 		// strings. This setting will prevent that.
 		"editor.wordBasedSuggestions": "off",
-	}
-
-
+  },
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
 }
