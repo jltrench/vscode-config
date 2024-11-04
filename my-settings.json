@@ -1,5 +1,5 @@
 {
-  // vscode meta stuff
+  // vscode stuff
   "workbench.startupEditor": "none",
   "editor.accessibilitySupport": "off",
   "javascript.suggest.autoImports": true,
@@ -82,8 +82,6 @@
   "gitlens.mode.active": "zen", // toggle with command palette, zen mode hides gitlens stuff for when you don't need it
   "editor.wordWrap": "on", // wrap text instead of scrolling horizontally
   //   Theme
-  "workbench.iconTheme": "chalice-icon-theme",
-  "workbench.colorTheme": "Vesper",
   //     Overrides vesper theme start
   "workbench.colorCustomizations": {
     "editorGutter.addedBackground": "#A0A0A0",
@@ -126,7 +124,6 @@
       }
     ]
   },
-  //     Overrides vesper theme end
   // git stuff
   "git.openRepositoryInParentFolders": "always",
   "git.autofetch": true,
@@ -151,13 +148,6 @@
       ".tsx"
     ]
   },
-  "eslint.validate": [
-    "mdx",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
   "tailwindCSS.experimental.classRegex": [
     // enables tailwind autocomplete for specified functions
     [
@@ -190,11 +180,23 @@
   "dart.showTodos": true,
   "symbols.hidesExplorerArrows": false,
   "go.toolsManagement.autoUpdate": true,
-  "window.density.editorTabHeight": "compact",
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": false,
     "markdown": false,
     "scminput": false
-  }
+  },
+  "workbench.iconTheme": "symbols",
+  "workbench.colorTheme": "Kanagawa",
+  "supermaven.otherWarning": false,
+  "window.density.editorTabHeight": "compact",
+  // "[typescript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  "supermaven.enable": {
+    "*": true
+  },
+  // "[typescriptreact]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // }
 }
