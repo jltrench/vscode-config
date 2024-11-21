@@ -16,7 +16,7 @@ code --install-extension eamodio.gitlens                   # GitLens
 # Background & Styling
 code --install-extension vscode.background                 # Background 
 code --install-extension eryouhao.brackets-light           # Brackets Light
-code --install-extension drcika.apc-extension             # Awesome Prompt Creator
+code --install-extension drcika.apc-extension             # Apc Customize UI++
 
 # Code Helpers
 code --install-extension dbaeumer.vscode-eslint           # ESLint
