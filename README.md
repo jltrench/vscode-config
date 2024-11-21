@@ -3,23 +3,23 @@
 
 My personal VS Code configuration focusing on minimalism and productivity.
 
-## Features
+## Required Extensions
 
-- Custom font: Geist Mono
-- Hidden UI elements for distraction-free coding
-- Right sidebar layout
-- File nesting patterns for cleaner workspace
-- Optimized ESLint and TypeScript settings
-- Transparent background with blur effect
-- Custom theme and styling
+```bash
+# Theme
+code --install-extension miguelsolorio.symbols-only-vscode  # Symbols (Icon Theme)
+code --install-extension miguelsolorio.min-theme           # Min Theme
 
-## Usage
+# Git
+code --install-extension eamodio.gitlens                   # GitLens
 
-1. Copy `settings.json` to your VS Code settings
-2. Install required fonts:
-  - [Geist Mono](https://vercel.com/font)
-  - Berkeley Mono (optional)
+# Background & Styling
+code --install-extension vscode.background                 # Background 
+code --install-extension eryouhao.brackets-light           # Brackets Light
+code --install-extension drcika.apc-extension             # Awesome Prompt Creator
 
-## Preview
-
-View `settings.json` for the complete configuration.
+# Code Helpers
+code --install-extension dbaeumer.vscode-eslint           # ESLint
+code --install-extension bradlc.vscode-tailwindcss        # Tailwind CSS
+code --install-extension github.copilot                   # GitHub Copilot
+```
