@@ -1,202 +1,162 @@
 {
-  // vscode stuff
-  "workbench.startupEditor": "none",
-  "editor.accessibilitySupport": "off",
-  "javascript.suggest.autoImports": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "typescript.preferences.preferTypeOnlyAutoImports": true,
-  "editor.fontLigatures": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "graphql"
-  ],
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-  "emmet.syntaxProfiles": {
-    "javascript": "jsx"
-  },
-  "extensions.ignoreRecommendations": true,
-  "explorer.compactFolders": false,
-  "explorer.sortOrder": "foldersNestsFiles",
-  "explorer.fileNesting.patterns": {
-    "package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-*, bun.lockb, nest*, package-lock*",
-    "tailwind.config.*": "tailwind.config*, postcss.config*",
-    ".env.local": ".env*",
-    ".env": ".env*"
-  },
-  "files.associations": {
-    ".env.*": "dotenv",
-    ".prettierrc": "json",
-    "*.css": "css"
-  },
-  // text editing stuff
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
-  "editor.linkedEditing": true,
-  "editor.inlineSuggest.enabled": true,
-  "editor.unicodeHighlight.nonBasicASCII": false,
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "workbench.editor.labelFormat": "short",
-  // ui stuff
-  //    font
-  "editor.fontFamily": "Geist Mono, Berkeley Mono, monospace",
-  "editor.fontSize": 14,
-  "editor.lineHeight": 1.42857, // makes font size 14 have line height of ~20px
-  "apc.font.family": "Geist Mono", // apply font to ALL the UI, requires APC extension
-  //   cursor
-  "editor.cursorBlinking": "smooth", // smol cursor animation, looks nice
-  "editor.cursorSmoothCaretAnimation": "on", // move cursor smoothly
-  //    window
-  //     title bar
-  "window.title": "${dirty}neovim${separator}${activeEditorShort}",
-  //     top bar
-  "workbench.editor.showTabs": "none", // hide tabs
-  "breadcrumbs.enabled": false, // hides breadcrumb path at top of window
-  "window.commandCenter": false, // hides command center at the top of the window. Use cmd+shift+p instead
-  "workbench.layoutControl.enabled": false, // hides those little squares on the top right of the window
-  "workbench.editor.editorActionsLocation": "hidden", // hides the "format" and ellipsis buttons on the top right of the window
-  //     minimap
-  "editor.minimap.renderCharacters": false, // make minimap blockish (low level of detail)
-  "editor.hideCursorInOverviewRuler": true, // don't highlight current line in scrollbar
-  "editor.minimap.autohide": true, // shows minimap only on hover
-  //     sidebar
-  "workbench.activityBar.location": "hidden", // hide sidebar icons, use cmd+b to toggle open
-  "workbench.sideBar.location": "right", // puts sidebar on the right, less disruptive (doesn't shift code if text wrap is disabled) when opening with cmd+b
-  //     bottom bar
-  "workbench.statusBar.visible": false, // hide bottom bar
-  //     editor
-  "editor.stickyScroll.enabled": true, // keep block name fixed at top when scrolling
-  "gitlens.mode.active": "zen", // toggle with command palette, zen mode hides gitlens stuff for when you don't need it
-  "editor.wordWrap": "on", // wrap text instead of scrolling horizontally
-  //   Theme
-  //     Overrides vesper theme start
-  "workbench.colorCustomizations": {
-    "editorGutter.addedBackground": "#A0A0A0",
-    "editorGutter.deletedBackground": "#A0A0A0",
-    "editorGutter.modifiedBackground": "#A0A0A0"
-  },
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      // remove peppermint flavor
-      {
-        "name": "String, Symbols, Inherited Class",
-        "scope": [
-          "string",
-          "constant.other.symbol",
-          "constant.other.key",
-          "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
-        ],
-        "settings": {
-          "foreground": "#A0A0A0"
-        }
-      },
-      {
-        "name": "CSS ID's",
-        "scope": [
-          "source.sass keyword.control",
-          "meta.attribute-selector.scss"
-        ],
-        "settings": {
-          "foreground": "#ffffff"
-        }
-      },
-      {
-        "name": "Inserted",
-        "scope": [
-          "markup.inserted"
-        ],
-        "settings": {
-          "foreground": "#ffffff"
-        }
-      }
-    ]
-  },
-  // git stuff
-  "git.openRepositoryInParentFolders": "always",
-  "git.autofetch": true,
-  "git.confirmNoVerifyCommit": false,
-  "git.confirmSync": false,
-  "git.ignoreMissingGitWarning": true,
-  "gitlens.gitCommands.skipConfirmations": [
-    "fetch:command",
-    "stash-push:command",
-    "switch:command",
-    "push:command"
-  ],
-  "gitlens.hovers.currentLine.over": "line",
-  // js tooling stuff
-  "typescript.preferences.importModuleSpecifier": "non-relative", // prefer aliases when importing
-  "eslint.options": {
-    "extensions": [
-      ".js",
-      ".jsx",
-      ".mdx",
-      ".ts",
-      ".tsx"
-    ]
-  },
-  "tailwindCSS.experimental.classRegex": [
-    // enables tailwind autocomplete for specified functions
-    [
-      "cva\\(([^)]*)\\)",
-      "[\"'`]([^\"'`]*).*?[\"'`]"
+    "workbench.startupEditor": "none",
+    "editor.accessibilitySupport": "off",
+    "javascript.suggest.autoImports": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.preferences.preferTypeOnlyAutoImports": true,
+    "editor.fontLigatures": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "graphql"
     ],
-    [
-      "cn\\(([^)]*)\\)",
-      "[\"'`]([^\"'`]*).*?[\"'`]"
-    ],
-    [
-      "cx\\(([^)]*)\\)",
-      "[\"'`]([^\"'`]*).*?[\"'`]"
-    ]
-  ],
-  "[prisma]": {
-    "editor.formatOnSave": true
-  },
-  "[dart]": {
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+    },
+    "extensions.ignoreRecommendations": true,
+    "explorer.compactFolders": false,
+    "explorer.sortOrder": "foldersNestsFiles",
+    "explorer.fileNesting.patterns": {
+        "package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-*, bun.lockb, nest*, package-lock*",
+        "tailwind.config.*": "tailwind.config*, postcss.config*",
+        ".env.local": ".env*",
+        ".env": ".env*"
+    },
+    "files.associations": {
+        ".env.*": "dotenv",
+        ".prettierrc": "json",
+        "*.css": "css"
+    },
     "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.rulers": [
-      80
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "editor.linkedEditing": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "workbench.editor.labelFormat": "short",
+    "editor.fontFamily": "Geist Mono, Berkeley Mono, monospace",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.5,
+    "editor.letterSpacing": 0.5,
+    "apc.font.family": "Geist Mono",
+    "editor.cursorStyle": "line-thin",
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "window.title": "${dirty}${activeEditorShort}",
+    "workbench.editor.showTabs": "none",
+    "breadcrumbs.enabled": false,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.activityBar.location": "hidden",
+    "workbench.sideBar.location": "right",
+    "workbench.statusBar.visible": false,
+    "editor.minimap.enabled": false,
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.guides.indentation": false,
+    "editor.roundedSelection": false,
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.ignoreMissingGitWarning": true,
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command",
+        "push:command"
     ],
-    "editor.selectionHighlight": false,
-    "editor.suggestSelection": "first",
-    "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": "off"
-  },
-  "dart.showTodos": true,
-  "symbols.hidesExplorerArrows": false,
-  "go.toolsManagement.autoUpdate": true,
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
-  "workbench.iconTheme": "symbols",
-  "workbench.colorTheme": "Kanagawa",
-  "supermaven.otherWarning": false,
-  "window.density.editorTabHeight": "compact",
-  // "[typescript]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
-  "supermaven.enable": {
-    "*": true
-  },
-  // "[typescriptreact]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // }
+    "gitlens.hovers.currentLine.over": "line",
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "eslint.options": {
+        "extensions": [
+            ".js",
+            ".jsx",
+            ".mdx",
+            ".ts",
+            ".tsx"
+        ]
+    },
+    "tailwindCSS.experimental.classRegex": [
+        [
+            "cva\\(([^)]*)\\)",
+            "[\"'`]([^\"'`]*).*?[\"'`]"
+        ],
+        [
+            "cn\\(([^)]*)\\)",
+            "[\"'`]([^\"'`]*).*?[\"'`]"
+        ],
+        [
+            "cx\\(([^)]*)\\)",
+            "[\"'`]([^\"'`]*).*?[\"'`]"
+        ]
+    ],
+    "window.zoomLevel": 0.65,
+    "window.density.editorTabHeight": "compact",
+    "terminal.integrated.inheritEnv": false,
+    "workbench.colorTheme": "Min Light",
+    "workbench.iconTheme": "symbols",
+    "apc.stylesheet": {
+        ".monaco-editor, .terminal-outer-container, .sidebar, .editor-group-container": {
+            "background-color": "rgba(23, 23, 23, 0.7) !important",
+            "backdrop-filter": "blur(10px) !important"
+        },
+        ".quick-input-widget": {
+            "position": "fixed !important",
+            "top": "60% !important",
+            "left": "50% !important",
+            "transform": "translate(-50%, -50%) !important",
+            "width": "60% !important",
+            "max-width": "800px !important",
+            "border-radius": "12px !important",
+            "border": "1px solid rgba(255, 255, 255, 0.1) !important"
+        }
+    },
+    "apc.electron": {
+        "opacity": 1,
+        "vibrancy": "under-window",
+        "backgroundColor": "#00000000"
+    },
+    "background.enabled": true,
+    "background.editor": {
+        "useFront": true,
+        "style": {
+            "content": "''",
+            "pointer-events": "none",
+            "position": "absolute",
+            // "z-index": "99999",
+            "width": "100%",
+            "height": "100%",
+            "background-position": "center",
+            "background-size": "cover",
+            "opacity": 0.2
+        },
+        "images": [
+            "https://raw.githubusercontent.com/D3Ext/aesthetic-wallpapers/main/images/kiryu_black.png"
+        ],
+        "interval": 0
+    },
+    "dart.showTodos": true,
+    "symbols.hidesExplorerArrows": false,
+    "go.toolsManagement.autoUpdate": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
 }
