@@ -1,5 +1,3 @@
-# VS Code Settings
-
 ![Light Theme](./images/light.png#gh-light-mode-only)
 ![Dark Theme](./images/dark.png#gh-dark-mode-only)
 
