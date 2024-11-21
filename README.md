@@ -1,8 +1,6 @@
 ![Light Theme](./images/light.png#gh-light-mode-only)
 ![Dark Theme](./images/dark.png#gh-dark-mode-only)
 
-My personal VS Code configuration focusing on minimalism and productivity.
-
 ## Required Extensions
 
 ```bash
